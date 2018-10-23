@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+</head>
+<body>
+	<input type="text" id="input1" /><br />
+	<button id="btn">提交</button>
+	<script type="text/javascript">
+	  $(function(){
+	  	$("#btn").on("click",function(){
+	  		console.log($("#input1").val());
+			$.ajax({
+				type:'post',
+				dataType:'json',
+				url:'127.0.0.1:1990',//路径
+				data:JSON.stringify({"param":$("#input1").val()}),//param是要提交到后台的字段名
+				success:function(data){
+					alert("提交成功");
+				}
+			})	  		
+	  	})
+	  });
+	</script>
+</body>
+</html>

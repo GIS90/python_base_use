@@ -1,0 +1,9 @@
+#coding:gbk
+
+
+
+
+
+f=r'E:\data\ÖĞÎÄÂ·¾¶\²âÊÔ.xml'
+content=open(f,'r')
+print content.readline(100)

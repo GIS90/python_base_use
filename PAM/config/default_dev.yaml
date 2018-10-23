@@ -1,0 +1,66 @@
+# 实际的配置文件请把此文件复制后改名，再行修改，不要直接修改此文件，并且保证每台机器一个文件
+# 该设备ip地址
+ip: 192.168.3.21
+# 设备操作系统类型
+ostype: win7_64
+
+# 设备的SNMP配置
+snmp:
+  enable: 1
+  community: tsnav
+  version: 1
+  port: 161
+
+# 远程桌面信息，如果可用enable设为1，不可用设为0
+rdp:
+  enable: 0
+  user: root
+  password: hello
+  port: 3389
+
+# ssh信息
+ssh:
+  enable: 0
+  user: root
+  password: root
+  port: 22
+
+# 数据库信息，如果该节点没有数据库则enable设为0
+database:
+  enable: 1
+  type: SQLServer
+  port: 1433
+  user: sa
+  password: 123456
+  default: sde
+
+# 需要检查的信息, 例如数据库、进程、硬盘；硬盘的目录信息要注意大小写
+checkitems:
+  - db:
+    - alias: GPS
+      dbName: FCD
+      delay: 300
+      sql: select top 1 time from GPS order by time desc
+    - alias: Link05m
+      dbName: FCD
+      delay: 600
+      sql: select top 1 time from Link05m order by time desc
+    - alias: Total15m
+      dbName: FCD
+      delay: 900
+      sql: select top 1 time from Total15m order by time desc
+  - hd:
+    - path: C:\\
+      warnning: 80
+      description: GPS folder
+    - path: D:\\
+      warnning: 80
+      description: Log
+  - process:
+    - ps:
+      description: tomcat
+      cmd: java -jar tomcat
+    - ps:
+      description: redirector
+      cmd: java -jar redirector
+

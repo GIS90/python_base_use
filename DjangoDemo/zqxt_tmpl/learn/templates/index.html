@@ -1,0 +1,12 @@
+
+
+
+{% if request.user.is_authenticated %}
+    {{ request.user.username }}，您好！
+{% else %}
+    请登陆，这里放登陆链接
+{% endif %}
+{{ request.path }}
+
+{{ request.GET.urlencode }}
+<a href="{{ request.path }}?{{ request.GET.urlencode }}&delete=1">当前网址加参数 delete</a>

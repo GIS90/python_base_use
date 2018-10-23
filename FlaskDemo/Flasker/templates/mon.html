@@ -1,0 +1,44 @@
+<title>memory monitor</title>
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Highstock Example</title>
+        <!-- <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script> -->
+        <script type="text/javascript" src="/imgr?src=http%3A%2F%2Fajax.useso.com%2Fajax%2Flibs%2Fjquery%2F1.8.2%2Fjquery.min.js&r=http%3A%2F%2Fwww.361way.com%2Fflask-mysql-highcharts-monitor%2F4261.html"></script>
+        <style type="text/css">
+${demo.css}
+        </style>
+        <script type="text/javascript">
+$(function () {
+    $.getJSON('/data?callback=?', function (data) {
+        // Create the chart
+        $('#container').highcharts('StockChart', {
+            rangeSelector: {
+                inputEnabled: $('#container').width() > 480,
+                selected: 1
+            },
+            title: {
+                text: 'memory monitor'
+            },
+            series: [{
+                name: 'memory monitor',
+                data: data,
+                type: 'spline',
+                tooltip: {
+                    valueDecimals: 2
+                }
+            }]
+        });
+    });
+});
+        </script>
+    </head>
+    <body>
+<!-- <script src="{{ url_for('static', filename='highstock.js') }}"></script> -->
+<script src="/imgr?src=http%3A%2F%2Fcdnjs.cloudflare.com%2Fajax%2Flibs%2Fhighstock%2F2.0.4%2Fhighstock.js&r=http%3A%2F%2Fwww.361way.com%2Fflask-mysql-highcharts-monitor%2F4261.html"></script>
+<!-- <script src="{{ url_for('static', filename='exporting.js') }}"></script> -->
+<script src="/imgr?src=http%3A%2F%2Fcode.highcharts.com%2Fmodules%2Fexporting.js&r=http%3A%2F%2Fwww.361way.com%2Fflask-mysql-highcharts-monitor%2F4261.html"></script>
+<div id="container" style="height: 400px"></div>
+    </body>
+</html>

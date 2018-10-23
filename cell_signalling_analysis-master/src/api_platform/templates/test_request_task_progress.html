@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="{{ static_url("css/style.css") }}">
+	<head><title>测试获取任务执行进度</title></head>
+  <div class="form-style-6">
+	<body>
+		<h1>输入参数</h1>
+    <table>
+      <tr>
+        <th>任务ID</th>
+        <th>任务描述</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>创建客户格式原始数据表</td>
+      </tr>
+      <tr>
+        <td>2</td> 
+        <td>上传客户格式原始数据表</td>
+      </tr>
+      <tr>
+        <td>3</td> 
+        <td>转换客户格式到内部格式</td>
+      </tr>
+      <tr>
+        <td>4</td> 
+        <td>原始数据的分区统计</td>
+      </tr>
+      <tr>
+        <td>5</td> 
+        <td>人基于数据量的分布</td>
+      </tr>
+      <tr>
+        <td>6</td> 
+        <td>计算基站信息</td>
+      </tr>
+      <tr>
+        <td>7</td> 
+        <td>下载基站信息</td>
+      </tr>
+      <tr>
+        <td>8</td> 
+        <td>用人基于数据量分布过滤数据</td>
+      </tr>
+      <tr>
+        <td>9</td> 
+        <td>过滤数据的分区统计</td>
+      </tr>
+      <tr>
+        <td>10</td> 
+        <td>计算小时粒度基站热度</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>下载小时粒度基站热度</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>计算人的时空信息表</td>
+      </tr>
+    </table>
+		<form method="post" action="/request_task_progress">
+		<p>项目ID<br><input type="text" name="project_id"></p>
+		<p>任务ID<br><input type="text" name="task_id"></p>
+		<input type="submit">
+		</form>
+	</body>
+  </div>
+</html>

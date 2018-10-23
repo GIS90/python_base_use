@@ -1,0 +1,8 @@
+# -*- coding: utf-8 -*-
+
+from django import forms
+
+
+class FileForm(forms.Form):
+    user = forms.CharField()
+    file = forms.FileField()

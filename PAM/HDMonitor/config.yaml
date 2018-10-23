@@ -1,0 +1,10 @@
+# 监控的目录的配置文件，以yaml格式存放
+# 可以监控多个目录或文件，如果被监控的path是一个目录，则遍历改目录下的所有文件和目录，如果超过timedelta的延迟，则尝试删除之
+# timedelta的单位是秒， 259200是3天整
+paths:
+  - item:
+      path: C:\\APKPlus\\decompile
+      timedelta: 30
+  - item:
+      path: C:\\APKPlus\\test2
+      timedelta: 30

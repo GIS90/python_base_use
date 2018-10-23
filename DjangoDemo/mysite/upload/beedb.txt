@@ -1,0 +1,81 @@
+安装：
+	go get github.com/astaxie/beedb
+API地址：
+	https://github.com/astaxie/beedb/wiki/API-Interface
+支持的数据库种类：
+	Mysql/SQLite/PostgreSQL/DB2/MS ADODB/ODBC/Oracle
+数据库包下载地址:
+	Mysql:github.com/ziutek/mymysql/godrv[*]
+	Mysql:github.com/Go-SQL-Driver/MySQL[*]
+	PostgreSQL:github.com/bmizerany/pq[*]
+	SQLite:github.com/mattn/go-sqlite3[*]
+	DB2: bitbucket.org/phiggins/go-db2-cli
+	MS ADODB: github.com/mattn/go-adodb[*]
+	ODBC: bitbucket.org/miquella/mgodbc[*]
+	Oracle: github.com/mattn/go-oci8
+
+
+Model struct:
+    Db         *sql.DB
+    TableName  string
+    LimitStr   int
+    OffsetStr  int
+    WhereStr   string
+    ParamStr   []interface{}
+    OrderStr   string
+    ColumnStr  string
+    PrimaryKey string
+    JoinStr    string
+    GroupByStr string
+    HavingStr  string
+
+Model method:
+func New(db *sql.DB) (m Model) *
+
+* Add New sql.DB in the future i will add ConnectionPool.Get()
+func (orm *Model) DelectRow() (int64, error)
+
+func (orm *Model) Delete(output interface{}) (int64, error)
+
+func (orm *Model) DeleteAll(rowsSlicePtr interface{}) (int64, error)
+
+func (orm *Model) Execute(finalQueryString string, args ...interface{}) (sql.Result, error) Execute sql
+
+func (orm *Model) Find(output interface{}) error
+
+func (orm *Model) FindAll(rowsSlicePtr interface{}) error
+
+func (orm *Model) FindMap() (resultsSlice []map[string][]byte, err error)
+
+func (orm *Model) GroupBy(keys string) *Model
+
+func (orm *Model) Having(conditions string) *Model
+
+func (orm *Model) Insert(properties map[string]interface{}) (int64, error) inert one info
+
+func (orm *Model) InsertBatch(rows []map[string]interface{}) ([]int64, error) insert batch info
+
+func (orm *Model) Join(join_operator, tablename, condition string) 
+
+
+ The join_operator should be one of INNER, LEFT OUTER, CROSS etc - this will be prepended to JOIN
+
+func (orm *Model) Limit(start int, size ...int) *Model
+
+func (orm *Model) Offset(offset int) *Model
+
+func (orm *Model) OrderBy(order string) *Model
+
+func (orm *Model) SacnPK(output interface{}) *Model
+
+func (orm *Model) Save(output interface{}) interface{} if the struct has PrimaryKey == 0 insert else update
+
+func (orm *Model) Select(colums string) *Model
+
+func (orm *Model) SetPK(pk string) *Model
+
+func (orm *Model) SetTable(tbname string) *Model
+
+func (orm *Model) Update(properties map[string]interface{}) (int64, error) update info
+
+func (orm *Model) Where(querystring interface{}, args ...interface{}) *Model

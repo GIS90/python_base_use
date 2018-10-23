@@ -1,0 +1,13 @@
+DATABASE:
+    # 数据库配置信息
+    TYPE: MySQL
+    SERVER: 127.0.0.1
+    PORT: 3306
+    DB: test
+    UID: root
+    PWD: 123456
+SERVER:
+    IP: ""
+    PORT: 60000
+
+

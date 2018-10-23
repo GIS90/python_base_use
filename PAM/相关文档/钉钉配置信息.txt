@@ -1,0 +1,39 @@
+钉钉id信息：
+CorpID和CorpSecret
+CorpID：ding3a49072919a9646c
+CorpSecret：okpvYSRYFLUY6LKkvxYPHy00x1L-dzwJY5zi6BTbNekUoQ4o3IhwBaLmC_hYSKA5
+
+
+CorpID和SSOSecret
+CorpID：ding3a49072919a9646c
+SSOsecret：TYX3vKsRcXU2Y74mx-z7Em_W2dDSTVD_LZ82KcxKumi-5NGw61c0lg18R_2Pzx3e
+
+运维 AgentID :9096501
+
+
+
+钉钉报警接口SDK配置步骤
+
+
+获取CorpID、CorpSecret、SSO_Secret
+
+1.https://oa.dingtalk.com/
+2.微应用 -> 微应用设置
+
+获取通知应用的AGENTID
+
+1.https://oa.dingtalk.com/
+2.微应用 -> 应用中心
+3.移至要通知应用，点击设置
+
+DingWarning配置
+
+
+在jar包根目录新建config.json 文件 填写一下信息
+{
+  "OAPI_HOST": "https://oapi.dingtalk.com",
+  "CORP_ID": "",
+  "CORP_SECRET": "",
+  "SSO_Secret": "",
+  "AGENTID": ""
+}

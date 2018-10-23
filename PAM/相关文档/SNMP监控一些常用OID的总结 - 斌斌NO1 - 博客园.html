@@ -1,0 +1,1432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0046)http://www.cnblogs.com/aspx-net/p/3554044.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园_files/bundle-sea.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/aspx-net/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/aspx-net/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/aspx-net/wlwmanifest.xml">
+<script src="./SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园_files/jquery.js" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'aspx-net', cb_enable_mathjax=false;</script>
+<script src="./SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园_files/blog-common.js" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="header">
+	
+<!--done-->
+<div class="header">
+	<div class="headerText">
+		<a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/aspx-net/">稻草人</a><br>
+		
+	</div>
+</div>
+
+</div>
+
+<div id="mytopmenu">
+	
+		<div id="mylinks">
+<!--done-->
+<a id="MyLinks1_HomeLink" class="menu" href="http://www.cnblogs.com/">博客园</a> &nbsp;
+<a id="MyLinks1_MyHomeLink" class="menu" href="http://www.cnblogs.com/aspx-net/">首页</a> &nbsp;
+<a href="http://q.cnblogs.com/" class="menu">博问</a> &nbsp;
+<a href="http://home.cnblogs.com/ing/" class="menu">闪存</a> &nbsp;
+<a id="MyLinks1_NewPostLink" class="menu" rel="nofollow" href="http://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a> &nbsp;
+<a id="MyLinks1_ContactLink" class="menu" rel="nofollow" href="http://msg.cnblogs.com/send/%E6%96%8C%E6%96%8CNO1">联系</a> &nbsp;
+<a id="MyLinks1_Syndication" class="menu" href="http://www.cnblogs.com/aspx-net/rss">订阅</a><a id="MyLinks1_XMLLink" href="http://www.cnblogs.com/aspx-net/rss"><img src="./SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园_files/xml.gif" alt="订阅"></a>&nbsp;
+<a id="MyLinks1_Admin" class="menu" rel="nofollow" href="http://i.cnblogs.com/">管理</a>
+</div>
+		<div id="mystats">
+<!--done-->
+随笔-13&nbsp;
+评论-19&nbsp;
+文章-0&nbsp;
+trackbacks-0
+</div>
+	
+</div>
+<div id="centercontent">
+	
+<div id="post_detail">
+<div class="post">
+	<h1 class="postTitle"><a id="cb_post_title_url" class="postTitle2" href="./SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园_files/SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园.html">SNMP监控一些常用OID的总结</a></h1>
+	<div id="cnblogs_post_body"><table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td colspan="4" valign="top" width="570">
+<p align="left">系统参数（1.3.6.1.2.1.1）</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">OID</p>
+</td>
+<td valign="top" width="151">
+<p align="left">描述</p>
+</td>
+<td valign="top" width="148">
+<p align="left">备注</p>
+</td>
+<td valign="top" width="121">
+<p align="left">请求方式</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.1.1.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">获取系统基本信息</p>
+</td>
+<td valign="top" width="148">
+<p align="left">SysDesc</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.1.3.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">监控时间</p>
+</td>
+<td valign="top" width="148">
+<p align="left">sysUptime</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.1.4.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">系统联系人</p>
+</td>
+<td valign="top" width="148">
+<p align="left">sysContact</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.1.5.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">获取机器名</p>
+</td>
+<td valign="top" width="148">
+<p align="left">SysName</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.1.6.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">机器坐在位置</p>
+</td>
+<td valign="top" width="148">
+<p align="left">SysLocation</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.1.7.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">机器提供的服务</p>
+</td>
+<td valign="top" width="148">
+<p align="left">SysService</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.25.4.2.1.2</p>
+</td>
+<td valign="top" width="151">
+<p align="left">系统运行的进程列表</p>
+</td>
+<td valign="top" width="148">
+<p align="left">hrSWRunName</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.25.6.3.1.2</p>
+</td>
+<td valign="top" width="151">
+<p align="left">系统安装的软件列表</p>
+</td>
+<td valign="top" width="148">
+<p align="left">hrSWInstalledName</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p align="left">&nbsp;</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td colspan="4" valign="top" width="570">
+<p align="left">网络接口（1.3.6.1.2.1.2）</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p align="left">OID</p>
+</td>
+<td valign="top" width="155">
+<p align="left">描述</p>
+</td>
+<td valign="top" width="142">
+<p align="left">备注</p>
+</td>
+<td valign="top" width="126">
+<p align="left">请求方式</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p align="left">.1.3.6.1.2.1.2.1.0</p>
+</td>
+<td valign="top" width="155">
+<p align="left">网络接口的数目</p>
+</td>
+<td valign="top" width="142">
+<p align="left">IfNumber</p>
+</td>
+<td valign="top" width="126">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p align="left">.1.3.6.1.2.1.2.2.1.2</p>
+</td>
+<td valign="top" width="155">
+<p align="left">网络接口信息描述</p>
+</td>
+<td valign="top" width="142">
+<p align="left">IfDescr</p>
+</td>
+<td valign="top" width="126">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p align="left">.1.3.6.1.2.1.2.2.1.3</p>
+</td>
+<td valign="top" width="155">
+<p align="left">网络接口类型</p>
+</td>
+<td valign="top" width="142">
+<p align="left">IfType</p>
+</td>
+<td valign="top" width="126">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p align="left">.1.3.6.1.2.1.2.2.1.4</p>
+</td>
+<td valign="top" width="155">
+<p align="left">接口发送和接收的最大IP数据报[BYTE]</p>
+</td>
+<td valign="top" width="142">
+<p align="left">IfMTU</p>
+</td>
+<td valign="top" width="126">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p align="left">.1.3.6.1.2.1.2.2.1.5</p>
+</td>
+<td valign="top" width="155">
+<p align="left">接口当前带宽[bps]</p>
+</td>
+<td valign="top" width="142">
+<p align="left">IfSpeed</p>
+</td>
+<td valign="top" width="126">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p align="left">.1.3.6.1.2.1.2.2.1.6</p>
+</td>
+<td valign="top" width="155">
+<p align="left">接口的物理地址</p>
+</td>
+<td valign="top" width="142">
+<p align="left">IfPhysAddress</p>
+</td>
+<td valign="top" width="126">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p align="left">.1.3.6.1.2.1.2.2.1.8</p>
+</td>
+<td valign="top" width="155">
+<p align="left">接口当前操作状态[up|down]</p>
+</td>
+<td valign="top" width="142">
+<p align="left">IfOperStatus</p>
+</td>
+<td valign="top" width="126">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p align="left">.1.3.6.1.2.1.2.2.1.10</p>
+</td>
+<td valign="top" width="155">
+<p align="left">接口收到的字节数</p>
+</td>
+<td valign="top" width="142">
+<p align="left">IfInOctet</p>
+</td>
+<td valign="top" width="126">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p align="left">.1.3.6.1.2.1.2.2.1.16</p>
+</td>
+<td valign="top" width="155">
+<p align="left">接口发送的字节数</p>
+</td>
+<td valign="top" width="142">
+<p align="left">IfOutOctet</p>
+</td>
+<td valign="top" width="126">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p align="left">.1.3.6.1.2.1.2.2.1.11</p>
+</td>
+<td valign="top" width="155">
+<p align="left">接口收到的数据包个数</p>
+</td>
+<td valign="top" width="142">
+<p align="left">IfInUcastPkts</p>
+</td>
+<td valign="top" width="126">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="147">
+<p align="left">.1.3.6.1.2.1.2.2.1.17</p>
+</td>
+<td valign="top" width="155">
+<p align="left">接口发送的数据包个数</p>
+</td>
+<td valign="top" width="142">
+<p align="left">IfOutUcastPkts</p>
+</td>
+<td valign="top" width="126">
+<p align="left">WALK</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p align="left">&nbsp;</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td colspan="4" valign="top" width="570">
+<p align="left">CPU及负载</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">OID</p>
+</td>
+<td valign="top" width="157">
+<p align="left">描述</p>
+</td>
+<td valign="top" width="123">
+<p align="left">备注</p>
+</td>
+<td valign="top" width="112">
+<p align="left">请求方式</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.9.0</p>
+</td>
+<td valign="top" width="157">
+<p align="left">用户CPU百分比</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssCpuUser</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.10.0</p>
+</td>
+<td valign="top" width="157">
+<p align="left">系统CPU百分比</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssCpuSystem</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.11.0</p>
+</td>
+<td valign="top" width="157">
+<p align="left">空闲CPU百分比</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssCpuIdle</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.50.0</p>
+</td>
+<td valign="top" width="157">
+<p align="left">原始用户CPU使用时间</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssCpuRawUser</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">.1.3.6.1.4.1.2021.11.51.0</p>
+</td>
+<td valign="top" width="157">
+<p align="left">原始nice占用时间</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssCpuRawNice</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.52.0</p>
+</td>
+<td valign="top" width="157">
+<p align="left">原始系统CPU使用时间</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssCpuRawSystem.</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.53.0</p>
+</td>
+<td valign="top" width="157">
+<p align="left">原始CPU空闲时间</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssCpuRawIdle</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.2.1.25.3.3.1.2</p>
+</td>
+<td valign="top" width="157">
+<p align="left">CPU的当前负载，N个核就有N个负载</p>
+</td>
+<td valign="top" width="123">
+<p align="left">hrProcessorLoad</p>
+</td>
+<td valign="top" width="112">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.3.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssSwapIn</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.4.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">SsSwapOut</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.5.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssIOSent</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.6.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssIOReceive</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.7.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssSysInterrupts</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.8.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssSysContext</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.54.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssCpuRawWait</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.56.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssCpuRawInterrupt</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.57.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssIORawSent</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.58.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssIORawReceived</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.59.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssRawInterrupts</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.60.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssRawContexts</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.61.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssCpuRawSoftIRQ</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.62.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssRawSwapIn.</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">. 1.3.6.1.4.1.2021.11.63.0</p>
+</td>
+<td valign="top" width="123">
+<p align="left">ssRawSwapOut</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">.1.3.6.1.4.1.2021.10.1.3.1</p>
+</td>
+<td valign="top" width="123">
+<p align="left">Load5</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">.1.3.6.1.4.1.2021.10.1.3.2</p>
+</td>
+<td valign="top" width="123">
+<p align="left">Load10</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="179">
+<p align="left">.1.3.6.1.4.1.2021.10.1.3.3</p>
+</td>
+<td valign="top" width="123">
+<p align="left">Load15</p>
+</td>
+<td valign="top" width="112">
+<p align="left">GET</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p align="left">&nbsp;</p>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td colspan="4" valign="top" width="570">
+<p align="left">内存及磁盘（1.3.6.1.2.1.25）</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">OID</p>
+</td>
+<td valign="top" width="151">
+<p align="left">描述</p>
+</td>
+<td valign="top" width="148">
+<p align="left">备注</p>
+</td>
+<td valign="top" width="121">
+<p align="left">请求方式</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.25.2.2.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">获取内存大小</p>
+</td>
+<td valign="top" width="148">
+<p align="left">hrMemorySize</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.25.2.3.1.1</p>
+</td>
+<td valign="top" width="151">
+<p align="left">存储设备编号</p>
+</td>
+<td valign="top" width="148">
+<p align="left">hrStorageIndex</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.25.2.3.1.2</p>
+</td>
+<td valign="top" width="151">
+<p align="left">存储设备类型</p>
+</td>
+<td valign="top" width="148">
+<p align="left">hrStorageType[OID]</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.25.2.3.1.3</p>
+</td>
+<td valign="top" width="151">
+<p align="left">存储设备描述</p>
+</td>
+<td valign="top" width="148">
+<p align="left">hrStorageDescr</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.25.2.3.1.4</p>
+</td>
+<td valign="top" width="151">
+<p align="left">簇的大小</p>
+</td>
+<td valign="top" width="148">
+<p align="left">hrStorageAllocationUnits</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.25.2.3.1.5</p>
+</td>
+<td valign="top" width="151">
+<p align="left">簇的的数目</p>
+</td>
+<td valign="top" width="148">
+<p align="left">hrStorageSize</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.2.1.25.2.3.1.6</p>
+</td>
+<td valign="top" width="151">
+<p align="left">使用多少，跟总容量相除就是占用率</p>
+</td>
+<td valign="top" width="148">
+<p align="left">hrStorageUsed</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.4.3.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Total Swap Size(虚拟内存)</p>
+</td>
+<td valign="top" width="148">
+<p align="left">memTotalSwap</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.4.4.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Available Swap Space</p>
+</td>
+<td valign="top" width="148">
+<p align="left">memAvailSwap</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.4.5.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Total RAM in machine</p>
+</td>
+<td valign="top" width="148">
+<p align="left">memTotalReal</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.4.6.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Total RAM used</p>
+</td>
+<td valign="top" width="148">
+<p align="left">memAvailReal</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.4.11.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Total RAM Free</p>
+</td>
+<td valign="top" width="148">
+<p align="left">memTotalFree</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.4.13.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Total RAM Shared</p>
+</td>
+<td valign="top" width="148">
+<p align="left">memShared</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.4.14.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Total RAM Buffered</p>
+</td>
+<td valign="top" width="148">
+<p align="left">memBuffer</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.4.15.0</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Total Cached Memory</p>
+</td>
+<td valign="top" width="148">
+<p align="left">memCached</p>
+</td>
+<td valign="top" width="121">
+<p align="left">GET</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.9.1.2</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Path where the disk is mounted</p>
+</td>
+<td valign="top" width="148">
+<p align="left">dskPath</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.9.1.3</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Path of the device for the partition</p>
+</td>
+<td valign="top" width="148">
+<p align="left">dskDevice</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.9.1.6</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Total size of the disk/partion (kBytes)</p>
+</td>
+<td valign="top" width="148">
+<p align="left">dskTotal</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.9.1.7</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Available space on the disk</p>
+</td>
+<td valign="top" width="148">
+<p align="left">dskAvail</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.9.1.8</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Used space on the disk</p>
+</td>
+<td valign="top" width="148">
+<p align="left">dskUsed</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.9.1.9</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Percentage of space used on disk</p>
+</td>
+<td valign="top" width="148">
+<p align="left">dskPercent</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.1.3.6.1.4.1.2021.9.1.10</p>
+</td>
+<td valign="top" width="151">
+<p align="left">Percentage of inodes used on disk</p>
+</td>
+<td valign="top" width="148">
+<p align="left">dskPercentNode</p>
+</td>
+<td valign="top" width="121">
+<p align="left">WALK</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p align="left">System Group<br>
+sysDescr 1.3.6.1.2.1.1.1<br>
+sysObjectID 1.3.6.1.2.1.1.2<br>
+sysUpTime 1.3.6.1.2.1.1.3<br>
+sysContact 1.3.6.1.2.1.1.4<br>
+sysName 1.3.6.1.2.1.1.5<br>
+sysLocation 1.3.6.1.2.1.1.6<br>
+sysServices 1.3.6.1.2.1.1.7<br>
+Interfaces Group<br>
+ifNumber 1.3.6.1.2.1.2.1<br>
+ifTable 1.3.6.1.2.1.2.2<br>
+ifEntry 1.3.6.1.2.1.2.2.1<br>
+ifIndex 1.3.6.1.2.1.2.2.1.1<br>
+ifDescr 1.3.6.1.2.1.2.2.1.2<br>
+ifType 1.3.6.1.2.1.2.2.1.3<br>
+ifMtu 1.3.6.1.2.1.2.2.1.4<br>
+ifSpeed 1.3.6.1.2.1.2.2.1.5<br>
+ifPhysAddress 1.3.6.1.2.1.2.2.1.6<br>
+ifAdminStatus 1.3.6.1.2.1.2.2.1.7<br>
+ifOperStatus 1.3.6.1.2.1.2.2.1.8<br>
+ifLastChange 1.3.6.1.2.1.2.2.1.9<br>
+ifInOctets 1.3.6.1.2.1.2.2.1.10<br>
+ifInUcastPkts 1.3.6.1.2.1.2.2.1.11<br>
+ifInNUcastPkts 1.3.6.1.2.1.2.2.1.12<br>
+ifInDiscards 1.3.6.1.2.1.2.2.1.13<br>
+ifInErrors 1.3.6.1.2.1.2.2.1.14<br>
+ifInUnknownProtos 1.3.6.1.2.1.2.2.1.15<br>
+ifOutOctets 1.3.6.1.2.1.2.2.1.16<br>
+ifOutUcastPkts 1.3.6.1.2.1.2.2.1.17<br>
+ifOutNUcastPkts 1.3.6.1.2.1.2.2.1.18<br>
+ifOutDiscards 1.3.6.1.2.1.2.2.1.19<br>
+ifOutErrors 1.3.6.1.2.1.2.2.1.20<br>
+ifOutQLen 1.3.6.1.2.1.2.2.1.21<br>
+ifSpecific 1.3.6.1.2.1.2.2.1.22<br>
+IP Group<br>
+ipForwarding 1.3.6.1.2.1.4.1<br>
+ipDefaultTTL 1.3.6.1.2.1.4.2<br>
+ipInReceives 1.3.6.1.2.1.4.3<br>
+ipInHdrErrors 1.3.6.1.2.1.4.4<br>
+ipInAddrErrors 1.3.6.1.2.1.4.5<br>
+ipForwDatagrams 1.3.6.1.2.1.4.6<br>
+ipInUnknownProtos 1.3.6.1.2.1.4.7<br>
+ipInDiscards 1.3.6.1.2.1.4.8<br>
+ipInDelivers 1.3.6.1.2.1.4.9<br>
+ipOutRequests 1.3.6.1.2.1.4.10<br>
+ipOutDiscards 1.3.6.1.2.1.4.11<br>
+ipOutNoRoutes 1.3.6.1.2.1.4.12<br>
+ipReasmTimeout 1.3.6.1.2.1.4.13<br>
+ipReasmReqds 1.3.6.1.2.1.4.14<br>
+ipReasmOKs 1.3.6.1.2.1.4.15<br>
+ipReasmFails 1.3.6.1.2.1.4.16<br>
+ipFragsOKs 1.3.6.1.2.1.4.17<br>
+ipFragsFails 1.3.6.1.2.1.4.18<br>
+ipFragCreates 1.3.6.1.2.1.4.19<br>
+ipAddrTable 1.3.6.1.2.1.4.20<br>
+ipAddrEntry 1.3.6.1.2.1.4.20.1<br>
+ipAdEntAddr 1.3.6.1.2.1.4.20.1.1<br>
+ipAdEntIfIndex 1.3.6.1.2.1.4.20.1.2<br>
+ipAdEntNetMask 1.3.6.1.2.1.4.20.1.3<br>
+ipAdEntBcastAddr 1.3.6.1.2.1.4.20.1.4<br>
+ipAdEntReasmMaxSize 1.3.6.1.2.1.4.20.1.5<br>
+ICMP Group<br>
+icmpInMsgs 1.3.6.1.2.1.5.1<br>
+icmpInErrors 1.3.6.1.2.1.5.2<br>
+icmpInDestUnreachs 1.3.6.1.2.1.5.3<br>
+icmpInTimeExcds 1.3.6.1.2.1.5.4<br>
+icmpInParmProbs 1.3.6.1.2.1.5.5<br>
+icmpInSrcQuenchs 1.3.6.1.2.1.5.6<br>
+icmpInRedirects 1.3.6.1.2.1.5.7<br>
+icmpInEchos 1.3.6.1.2.1.5.8<br>
+icmpInEchoReps 1.3.6.1.2.1.5.9<br>
+icmpInTimestamps 1.3.6.1.2.1.5.10<br>
+icmpInTimestampReps 1.3.6.1.2.1.5.11<br>
+icmpInAddrMasks 1.3.6.1.2.1.5.12<br>
+icmpInAddrMaskReps 1.3.6.1.2.1.5.13<br>
+icmpOutMsgs 1.3.6.1.2.1.5.14<br>
+icmpOutErrors 1.3.6.1.2.1.5.15<br>
+icmpOutDestUnreachs 1.3.6.1.2.1.5.16<br>
+icmpOutTimeExcds 1.3.6.1.2.1.5.17<br>
+icmpOutParmProbs 1.3.6.1.2.1.5.18<br>
+icmpOutSrcQuenchs 1.3.6.1.2.1.5.19<br>
+icmpOutRedirects 1.3.6.1.2.1.5.20<br>
+icmpOutEchos 1.3.6.1.2.1.5.21<br>
+icmpOutEchoReps 1.3.6.1.2.1.5.22<br>
+icmpOutTimestamps 1.3.6.1.2.1.5.23<br>
+icmpOutTimestampReps 1.3.6.1.2.1.5.24<br>
+icmpOutAddrMasks 1.3.6.1.2.1.5.25<br>
+icmpOutAddrMaskReps 1.3.6.1.2.1.5.26<br>
+TCP Group<br>
+tcpRtoAlgorithm 1.3.6.1.2.1.6.1<br>
+tcpRtoMin 1.3.6.1.2.1.6.2<br>
+tcpRtoMax 1.3.6.1.2.1.6.3<br>
+tcpMaxConn 1.3.6.1.2.1.6.4<br>
+tcpActiveOpens 1.3.6.1.2.1.6.5<br>
+tcpPassiveOpens 1.3.6.1.2.1.6.6<br>
+tcpAttemptFails 1.3.6.1.2.1.6.7<br>
+tcpEstabResets 1.3.6.1.2.1.6.8<br>
+tcpCurrEstab 1.3.6.1.2.1.6.9<br>
+tcpInSegs 1.3.6.1.2.1.6.10<br>
+tcpOutSegs 1.3.6.1.2.1.6.11<br>
+tcpRetransSegs 1.3.6.1.2.1.6.12<br>
+tcpConnTable 1.3.6.1.2.1.6.13<br>
+tcpConnEntry 1.3.6.1.2.1.6.13.1<br>
+tcpConnState 1.3.6.1.2.1.6.13.1.1<br>
+tcpConnLocalAddress 1.3.6.1.2.1.6.13.1.2<br>
+tcpConnLocalPort 1.3.6.1.2.1.6.13.1.3<br>
+tcpConnRemAddress 1.3.6.1.2.1.6.13.1.4<br>
+tcpConnRemPort 1.3.6.1.2.1.6.13.1.5<br>
+tcpInErrs 1.3.6.1.2.1.6.14<br>
+tcpOutRsts 1.3.6.1.2.1.6.15<br>
+UDP Group<br>
+udpInDatagrams 1.3.6.1.2.1.7.1<br>
+udpNoPorts 1.3.6.1.2.1.7.2<br>
+udpInErrors 1.3.6.1.2.1.7.3<br>
+udpOutDatagrams 1.3.6.1.2.1.7.4<br>
+udpTable 1.3.6.1.2.1.7.5<br>
+udpEntry 1.3.6.1.2.1.7.5.1<br>
+udpLocalAddress 1.3.6.1.2.1.7.5.1.1<br>
+udpLocalPort 1.3.6.1.2.1.7.5.1.2<br>
+SNMP Group<br>
+snmpInPkts 1.3.6.1.2.1.11.1<br>
+snmpOutPkts 1.3.6.1.2.1.11.2<br>
+snmpInBadVersions 1.3.6.1.2.1.11.3<br>
+snmpInBadCommunityNames 1.3.6.1.2.1.11.4<br>
+snmpInBadCommunityUses 1.3.6.1.2.1.11.5<br>
+snmpInASNParseErrs 1.3.6.1.2.1.11.6<br>
+NOT USED 1.3.6.1.2.1.11.7<br>
+snmpInTooBigs 1.3.6.1.2.1.11.8<br>
+snmpInNoSuchNames 1.3.6.1.2.1.11.9<br>
+snmpInBadValues 1.3.6.1.2.1.11.10<br>
+snmpInReadOnlys 1.3.6.1.2.1.11.11<br>
+snmpInGenErrs 1.3.6.1.2.1.11.12<br>
+snmpInTotalReqVars 1.3.6.1.2.1.11.13<br>
+snmpInTotalSetVars 1.3.6.1.2.1.11.14<br>
+snmpInGetRequests 1.3.6.1.2.1.11.15<br>
+snmpInGetNexts 1.3.6.1.2.1.11.16<br>
+snmpInSetRequests 1.3.6.1.2.1.11.17<br>
+snmpInGetResponses 1.3.6.1.2.1.11.18<br>
+snmpInTraps 1.3.6.1.2.1.11.19<br>
+snmpOutTooBigs 1.3.6.1.2.1.11.20<br>
+snmpOutNoSuchNames 1.3.6.1.2.1.11.21<br>
+snmpOutBadValues 1.3.6.1.2.1.11.22<br>
+NOT USED 1.3.6.1.2.1.11.23<br>
+snmpOutGenErrs 1.3.6.1.2.1.11.24<br>
+snmpOutGetRequests 1.3.6.1.2.1.11.25<br>
+snmpOutGetNexts 1.3.6.1.2.1.11.26<br>
+snmpOutSetRequests 1.3.6.1.2.1.11.27<br>
+snmpOutGetResponses 1.3.6.1.2.1.11.28<br>
+snmpOutTraps 1.3.6.1.2.1.11.29<br>
+snmpEnableAuthenTraps 1.3.6.1.2.1.11.30</p>
+<p align="left">&nbsp;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/aspx-net/category/553385.html">SNMP</a></div>
+<div id="EntryTag">标签: <a href="http://www.cnblogs.com/aspx-net/tag/SNMP/">SNMP</a></div>
+<div id="blog_post_info"><div id="green_channel">
+<a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(3554044,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+<a id="green_channel_follow" onclick="c_follow();" href="javascript:void(0);">关注我</a>
+<a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a><a id="green_channel_contact" href="http://msg.cnblogs.com/send/%E6%96%8C%E6%96%8CNO1" target="_blank">联系我</a>
+<a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园_files/icon_weibo_24.png" alt=""></a>
+<a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+<div id="author_profile_info" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/aspx-net/" target="_blank"><img src="./SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园_files/u148758.bmp" class="author_avatar" alt=""></a>
+<div id="author_profile_detail" class="author_profile_info">
+<a href="http://home.cnblogs.com/u/aspx-net/">斌斌NO1</a><br>
+<a href="http://home.cnblogs.com/u/aspx-net/followees">关注 - 4</a><br>
+<a href="http://home.cnblogs.com/u/aspx-net/followers">粉丝 - 8</a>
+</div>
+</div>
+<div class="clear"></div>
+<div id="author_profile_honor"></div>
+<div id="author_profile_follow">
+    <a href="javascript:void(0);" onclick="c_follow();return false;">+加关注</a>
+</div>
+</div>
+<div id="div_digg">										
+    <div class="diggit" onclick="votePost(3554044,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+	<div class="buryit" onclick="votePost(3554044,&#39;Bury&#39;)"> 
+		<span class="burynum" id="bury_count">0</span>
+	</div>
+	<div class="clear"></div>	
+	<div class="diggword" id="digg_tips">
+    (请您对文章做出评价)
+    </div>	
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/aspx-net/p/3553655.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/aspx-net/p/3553655.html" title="发布于2014-02-18 09:23">SNMP的工作原理&amp;软件开发</a><br><a href="http://www.cnblogs.com/aspx-net/p/3975137.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/aspx-net/p/3975137.html" title="发布于2014-09-16 16:03">Mysql InnoDB彻底释放磁盘空间</a><br></div>
+</div>
+
+
+	<div class="postDesc">posted on <span id="post-date">2014-02-18 12:54</span> <a href="http://www.cnblogs.com/aspx-net/">斌斌NO1</a> 阅读(<span id="post_view_count">18637</span>) 评论(<span id="post_comment_count">1</span>)  <a href="http://i.cnblogs.com/EditPosts.aspx?postid=3554044" rel="nofollow">编辑</a> <a href="http://www.cnblogs.com/aspx-net/p/3554044.html#" onclick="AddToWz(3554044);return false;">收藏</a></div>
+</div>
+<script type="text/javascript">var allowComments=true,isLogined=false,cb_blogId=73592,cb_entryId=3554044,cb_blogApp=currentBlogApp,cb_blogUserGuid='400c783d-9398-df11-ba8f-001cf0cd104b',cb_entryCreatedDate='2014/2/18 12:54:00';loadViewCount(cb_entryId);</script>
+
+</div><a name="!comments"></a><div id="blog-comments-placeholder"><div id="comments_pager_top"></div>
+<!--done-->
+<br>
+<b>评论:</b>
+<div class="feedbackNoItems"></div>
+	
+
+		<div class="feedbackItem">
+			<div class="feedbackListSubtitle">
+			<a href="http://www.cnblogs.com/aspx-net/p/3554044.html#3240492" class="layer">#1楼</a><a name="3240492" id="comment_anchor_3240492"></a><span id="comment-maxId" style="display:none;">3240492</span><span id="comment-maxDate" style="display:none;">2015/8/3 17:38:53</span>
+				 <span class="comment_date">2015-08-03 17:38</span> | <a id="a_comment_author_3240492" href="http://www.cnblogs.com/huidesy/" target="_blank">郭辉辉郭</a> <a href="http://msg.cnblogs.com/send/%E9%83%AD%E8%BE%89%E8%BE%89%E9%83%AD" title="发送站内短消息" class="sendMsg2This">&nbsp;</a><br>
+				<div align="left"><div id="comment_body_3240492" class="blog_comment_body">这个2021节点，为什么我访问不到，取得数据都是Null</div><div class="comment_vote"><a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(3240492,&#39;Digg&#39;,this)">支持(0)</a><a href="javascript:void(0);" class="comment_bury" onclick="return voteComment(3240492,&#39;Bury&#39;,this)">反对(0)</a></div><span id="comment_3240492_avatar" style="display:none;">http://pic.cnblogs.com/face/789778/20150724160217.png</span>&nbsp;&nbsp;<span class="comment_actions"></span></div>
+			</div>
+			
+			
+		</div>
+	
+
+
+
+<div id="comments_pager_bottom"></div></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="http://www.cnblogs.com/aspx-net/p/3554044.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/aspx-net/p/3554044.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="http://click.aliyun.com/m/3037/" target="_blank">【阿里云SSD云盘】速度行业领先</a><br></div>
+<div id="opt_under_post"></div>
+<div id="ad_c1" class="c_ad_block"><a href="http://click.aliyun.com/m/3694/" target="_blank"><img width="300" height="250" src="./SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园_files/24442-20160202091423569-2078876690.jpg" alt="网站选型" title="网站选型"></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/538954/" target="_blank">IBM在2016年将拓展其云数据分析服务业务</a><br> ·  <a href="http://news.cnblogs.com/n/538953/" target="_blank">iPhone 7为何取消3.5mm耳机插口？原因出来了</a><br> ·  <a href="http://news.cnblogs.com/n/538952/" target="_blank">2016年会成为Java EE微服务年吗？</a><br> ·  <a href="http://news.cnblogs.com/n/538951/" target="_blank">微信支付VS支付宝：提现费率及速度比较 哪个更划算？</a><br> ·  <a href="http://news.cnblogs.com/n/538950/" target="_blank">平安好车被曝关闭 汽车之家是接盘侠？</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/536332/" target="_blank">学习新东西的唯一方法</a><br> ·  <a href="http://kb.cnblogs.com/page/536714/" target="_blank">关于烂代码的那些事（下）</a><br> ·  <a href="http://kb.cnblogs.com/page/538102/" target="_blank">每个架构师都应该研究下康威定律</a><br> ·  <a href="http://kb.cnblogs.com/page/537914/" target="_blank">消息队列（Message Queue）基本概念</a><br> ·  <a href="http://kb.cnblogs.com/page/536779/" target="_blank">编程每一天（Write Code Every Day）</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+$(function () {
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);    
+});
+</script>
+</div>
+
+
+</div>
+<div id="leftcontent">
+	
+		<div id="leftcontentcontainer">
+			
+<!--done-->
+<div class="newsItem">
+	<div id="blog-news"><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/aspx-net/">斌斌NO1</a><br>园龄：<a href="http://home.cnblogs.com/u/aspx-net/" title="入园时间：2010-07-26">5年6个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/aspx-net/followers/">8</a><br>关注：<a href="http://home.cnblogs.com/u/aspx-net/followees/">4</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="cnblogs.UserManager.FollowBlogger(&#39;400c783d-9398-df11-ba8f-001cf0cd104b&#39;)">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2016/01/01&#39;);return false;">&lt;</a></td><td align="center">2016年2月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2016/03/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">31</td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td class="CalWeekendDay" align="center">6</td></tr><tr><td class="CalWeekendDay" align="center">7</td><td align="center">8</td><td align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td><td class="CalWeekendDay" align="center">13</td></tr><tr><td class="CalWeekendDay" align="center">14</td><td align="center">15</td><td class="CalTodayDay" align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td><td class="CalWeekendDay" align="center">20</td></tr><tr><td class="CalWeekendDay" align="center">21</td><td align="center">22</td><td align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td class="CalWeekendDay" align="center">27</td></tr><tr><td class="CalWeekendDay" align="center">28</td><td align="center">29</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td></tr><tr><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td><td class="CalOtherMonthDay" align="center">8</td><td class="CalOtherMonthDay" align="center">9</td><td class="CalOtherMonthDay" align="center">10</td><td class="CalOtherMonthDay" align="center">11</td><td class="CalOtherMonthDay" align="center">12</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script><br>
+			<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/aspx-net/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/aspx-net/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/aspx-net/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/aspx-net/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/aspx-net/tag/" title="我的博客的标签列表">我的标签</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+
+</div></div><div id="sidebar_toptags" class="sidebar-block">
+<h3 class="catListTitle">我的标签</h3>
+<div id="MyTag">
+<ul>
+<li><a href="http://www.cnblogs.com/aspx-net/tag/SNMP/">SNMP</a>(2)</li><li><a href="http://www.cnblogs.com/aspx-net/tag/WEB%E5%89%8D%E7%AB%AF/">WEB前端</a>(1)</li><li><a href="http://www.cnblogs.com/aspx-net/tag/%E5%AF%86%E7%A0%81%E4%B8%A2%E5%A4%B1/">密码丢失</a>(1)</li><li><a href="http://www.cnblogs.com/aspx-net/tag/%E9%87%8A%E6%94%BE%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4/">释放磁盘空间</a>(1)</li><li><a href="http://www.cnblogs.com/aspx-net/tag/%E5%88%B7%E6%96%B0/">刷新</a>(1)</li><li><a href="http://www.cnblogs.com/aspx-net/tag/GridView%E5%AF%BC%E5%87%BAExcel/">GridView导出Excel</a>(1)</li><li><a href="http://www.cnblogs.com/aspx-net/tag/Innodb/">Innodb</a>(1)</li><li><a href="http://www.cnblogs.com/aspx-net/tag/Mysql/">Mysql</a>(1)</li>
+</ul>
+</div></div><div id="sidebar_categories">
+		<h3 class="catListTitle">随笔分类</h3>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="CatList_LinkList_0_Link_0" class="listitem" href="http://www.cnblogs.com/aspx-net/category/553388.html">ASP.NET(6)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_0_Link_1" class="listitem" href="http://www.cnblogs.com/aspx-net/category/614672.html">bat</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_0_Link_2" class="listitem" href="http://www.cnblogs.com/aspx-net/category/614671.html">C#</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_0_Link_3" class="listitem" href="http://www.cnblogs.com/aspx-net/category/553387.html">JS/CSS(3)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_0_Link_4" class="listitem" href="http://www.cnblogs.com/aspx-net/category/612872.html">Mysql(2)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_0_Link_5" class="listitem" href="http://www.cnblogs.com/aspx-net/category/553385.html">SNMP(2)</a></li>
+			
+				</ul>
+			
+	
+		<h3 class="catListTitle">随笔档案</h3>
+		
+				<ul class="catList">
+			
+				<li class="catListItem"> <a id="CatList_LinkList_1_Link_0" class="listitem" href="http://www.cnblogs.com/aspx-net/archive/2014/09.html">2014年9月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_1_Link_1" class="listitem" href="http://www.cnblogs.com/aspx-net/archive/2014/02.html">2014年2月 (2)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_1_Link_2" class="listitem" href="http://www.cnblogs.com/aspx-net/archive/2011/03.html">2011年3月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_1_Link_3" class="listitem" href="http://www.cnblogs.com/aspx-net/archive/2011/02.html">2011年2月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_1_Link_4" class="listitem" href="http://www.cnblogs.com/aspx-net/archive/2010/12.html">2010年12月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_1_Link_5" class="listitem" href="http://www.cnblogs.com/aspx-net/archive/2010/09.html">2010年9月 (1)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_1_Link_6" class="listitem" href="http://www.cnblogs.com/aspx-net/archive/2010/08.html">2010年8月 (3)</a></li>
+			
+				<li class="catListItem"> <a id="CatList_LinkList_1_Link_7" class="listitem" href="http://www.cnblogs.com/aspx-net/archive/2010/07.html">2010年7月 (2)</a></li>
+			
+				</ul>
+			
+	
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<h3 class="catListTitle">最新评论</h3>
+<div class="RecentComment" id="RecentComments">
+	<div id="RecentCommentsBlock"><ul>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/aspx-net/p/3553655.html#3346637">1. Re:SNMP的工作原理&amp;软件开发</a></li>
+    <li class="recent_comment_body">好的，谢谢</li>
+    <li class="recent_comment_author">--FreeBamb</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/aspx-net/p/3553655.html#3346634">2. Re:SNMP的工作原理&amp;软件开发</a></li>
+    <li class="recent_comment_body">建议你搜下snmp 的QQ交流群</li>
+    <li class="recent_comment_author">--斌斌NO1</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/aspx-net/p/3553655.html#3346626">3. Re:SNMP的工作原理&amp;软件开发</a></li>
+    <li class="recent_comment_body">@斌斌NO1我现在手里有份简单的文档，是用这个工具AdventNet Agent Toolkit C Edition 6 做window平台的snmp开发，对这个工具创建mib文件不熟悉，不知楼主能否......</li>
+    <li class="recent_comment_author">--FreeBamb</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/aspx-net/p/3553655.html#3346584">4. Re:SNMP的工作原理&amp;软件开发</a></li>
+    <li class="recent_comment_body">@FreeBambSnmpSharpNet 看看这个对你有没有帮助snmp开发的难点在于不同类型的mib不一样，这个比较麻烦...</li>
+    <li class="recent_comment_author">--斌斌NO1</li>
+    <li class="recent_comment_title"><a href="http://www.cnblogs.com/aspx-net/p/3553655.html#3346562">5. Re:SNMP的工作原理&amp;软件开发</a></li>
+    <li class="recent_comment_body">博主，我正在做这个snmp开发，现在没有思路，能否提供点资料或者建议我去什么地方学习？</li>
+    <li class="recent_comment_author">--FreeBamb</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<h3 class="catListTitle">阅读排行榜</h3>
+<div class="RecentComment" id="TopViewPosts"> 
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/aspx-net/archive/2011/03/11/1981071.html">1. JS+CSS简单实现DIV遮罩层显示隐藏(60936)</a></li><li><a href="./SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园_files/SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园.html">2. SNMP监控一些常用OID的总结(18635)</a></li><li><a href="http://www.cnblogs.com/aspx-net/archive/2010/08/03/1791053.html">3. js过滤特殊字符输入(可过滤输入,粘贴,拖拽多种情况)(2137)</a></li><li><a href="http://www.cnblogs.com/aspx-net/p/3553655.html">4. SNMP的工作原理&amp;软件开发(2023)</a></li><li><a href="http://www.cnblogs.com/aspx-net/archive/2010/07/28/1786714.html">5. 解决GridView导出Excel后，分页,排序,中文乱码的问题(1370)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<h3 class="catListTitle">评论排行榜</h3>
+<div class="RecentComment" id="TopCommentsPosts">
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/aspx-net/archive/2011/03/11/1981071.html">1. JS+CSS简单实现DIV遮罩层显示隐藏(8)</a></li><li><a href="http://www.cnblogs.com/aspx-net/p/3553655.html">2. SNMP的工作原理&amp;软件开发(5)</a></li><li><a href="http://www.cnblogs.com/aspx-net/archive/2010/09/06/1818807.html">3. DataList控件的分页(3)</a></li><li><a href="http://www.cnblogs.com/aspx-net/archive/2010/08/30/1812357.html">4. GridView控件在不使用数据源控件时，实现排序和分页(1)</a></li><li><a href="./SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园_files/SNMP监控一些常用OID的总结 - 斌斌NO1 - 博客园.html">5. SNMP监控一些常用OID的总结(1)</a></li></ul></div>
+</div></div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div class="RecentComment">
+	<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/aspx-net/archive/2011/03/11/1981071.html">1. JS+CSS简单实现DIV遮罩层显示隐藏(10)</a></li><li><a href="http://www.cnblogs.com/aspx-net/p/3553655.html">2. SNMP的工作原理&amp;软件开发(2)</a></li><li><a href="http://www.cnblogs.com/aspx-net/archive/2010/07/28/1786699.html">3. 解决ASP.NET刷新密码丢失(1)</a></li><li><a href="http://www.cnblogs.com/aspx-net/archive/2010/08/03/1791029.html">4. 轻松搞定验证码刷新(1)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script></div>
+	
+</div>
+
+<!--done-->
+<div class="footer">
+	Powered by: <a href="http://www.cnblogs.com/">博客园</a>	模板提供：<a href="http://blog.hjenglish.com/">沪江博客</a>
+	Copyright ©2016 斌斌NO1
+</div>
+
+
+
+
+
+<div id="qq-sendUrl-btn"></div><div id="qb-sougou-search" style="display: none; opacity: 0; left: 318px; top: 3047px;"><p>搜索</p><p class="last-btn">复制</p><iframe src=""></iframe></div></body></html>

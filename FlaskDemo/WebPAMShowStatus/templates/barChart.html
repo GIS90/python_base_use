@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>barEChart</title>
+    <style type="text/css">
+		.mainClass{
+			background-color:#999999;
+			width:900px;
+			height:500px;
+			border:red dashed 3px;
+			text-align:center;
+			margin:0 auto;
+		}
+	</style>
+
+
+
+</head>
+
+<body>
+	<div id='mainDiv' class='mainClass'></div>
+    <script src="echarts-2.2.7/build/dist/echarts.js"></script>
+    <script type="text/javascript">
+		require.config({
+			paths:{
+				echarts:"echarts-2.2.7/build/dist"
+			}
+		});
+		require(
+            [
+                'echarts',
+                'echarts/chart/line',   // 按需加载所需图表，如需动态类型切换功能，别忘了同时加载相应图表
+                'echarts/chart/bar'
+            ],
+            function (ec) {
+                var myChart = ec.init(document.getElementById('mainDiv'));
+                option = {
+				
+					color : [ 
+						 '#000000',  '#BCBABA'
+					],
+				
+				
+					title : {
+						text: '北京市本周温度',
+						subtext: '纯属虚构',
+						x: 'center',
+						y: 'top'
+					},
+					tooltip : {
+						show: true,
+						trigger: 'axis',
+						enterable: true
+						
+					},
+					legend: {
+						data:['本周','上周'],
+						x: 'left',
+						y: 'bottom',
+						orient: 'vertical'
+						
+					},
+					dataZoom: {
+						show : true,
+						orient : 'horizontal',
+						width : 750,
+						
+					},
+					
+					toolbox: {
+						show : true,
+						feature : {
+							mark : {show: true},
+							dataView : {show: true, readOnly: false},
+							magicType : {show: true, type: ['line', 'bar']},
+							restore : {show: true},
+							saveAsImage : {show: true}
+						}
+					},
+					calculable : true,
+					xAxis : [
+						{
+							type : 'category',
+							data : ['星期一','星期二','星期三','星期四','星期五','星期六','星期天']
+						}
+					],
+					yAxis : [
+						{
+							type : 'value'
+						}
+					],
+					series : [
+						{
+							name:'本周',
+							type:'line',
+							data:[2.0, 4.9, 7.0, 32.6, 20.0, 6.4, 3.3],
+							markPoint : {
+								data : [
+									{type : 'max', name: '最大值'},
+									{type : 'min', name: '最小值'}
+								]
+							},
+							markLine : {
+								data : [
+									{type : 'average', name: '平均值'}
+								]
+							}
+						},
+						{
+							name:'上周',
+							type:'line',
+							data:[2.6, 5.9, 9.0, 26.4, 18.8, 6.0, 2.3],
+							markPoint : {
+								data : [
+									{name : '年最高', value : 182.2, xAxis: 7, yAxis: 183, symbolSize:18},
+									{name : '年最低', value : 2.3, xAxis: 11, yAxis: 3}
+								]
+							},
+							markLine : {
+								data : [
+									{type : 'average', name : '平均值'}
+								]
+							}
+						}
+					]
+				};
+                    
+                myChart.setOption(option);
+            }
+        );
+		
+		
+	</script>
+
+	
+
+</body>
+</html>

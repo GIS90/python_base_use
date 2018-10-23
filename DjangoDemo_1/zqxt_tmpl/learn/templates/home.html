@@ -1,0 +1,11 @@
+﻿<!--{% for i in lt %}-->
+<!--{{ i }}{% if not forloop.last %},{% endif %}-->
+<!--{% endfor %}-->
+<!--<ul>-->
+<!--{% for tutor in tutorialist %}-->
+<!--<li> {{ tutor}} </li>-->
+<!--{% empty %}-->
+<!--<li>列表为空</li>-->
+<!--{% endfor %}-->
+<!--</ul>-->
+<a href="{{ request.path }}?{{ request.GET.urlencode }}&delete=1">当前网址加参数 delete</a>

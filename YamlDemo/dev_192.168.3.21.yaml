@@ -1,0 +1,75 @@
+# the general description of database
+description: Datebase
+# the importance level of this node
+importance: 10
+# the IP of this device
+ip: 192.168.3.21
+# the OS type
+ostype: win7_64
+
+# the SNMP configuration
+snmp:
+  enable: 1
+  community: tsnav
+  version: 1
+  port: 161
+
+# remote desktop info, if this is enabled, set the 'enable' to 1, else to 0
+rdp:
+  enable: 0
+  user: root
+  password: hello
+  port: 3389
+
+# ssh account information
+ssh:
+  enable: 0
+  user:
+  password:
+  port:
+
+# the database information, if there is no database setup on this node, set enable value to 0
+database:
+  enable: 1
+  type: SQLServer
+  url: 192.168.3.21
+  user: fcdsys
+  password: \#fcd-a504
+  default: Congest
+
+# which data we need to check, such as db, process, harddisc
+checkitems:
+  - db:
+    - alias: GPS
+      dbName: FCD
+      interval: 300
+      sql: select top 1 time from GPS order by time desc
+    - alias: GPS
+      dbName: FCD
+      interval: 15
+      sql: select top 1 time from GPS order by time desc
+    - alias: Link05m
+      dbName: FCD
+      interval: 900
+      sql: select top 1 time from GPS order by time desc
+    - alias: Total15m
+      dbName: FCD
+      interval: 10000
+      sql: select top 1 time from GPS order by time desc
+  - hd:
+    - path: C:\\
+      interval: 3600
+      description: GPS folder
+    - path: D:\\
+      interval: 3600
+      description: logs
+  - process:
+    - ps:
+      description: tomcat
+      interval: 1800
+      cmd: java -jar tomcat
+    - ps:
+      description: redirector
+      interval: 1800
+      cmd: java -jar tomcat
+

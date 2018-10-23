@@ -1,0 +1,16 @@
+# 脚本的配置文件
+
+[SMTP]
+smtp_host = "smtp.163.com"
+mailTo_list = ['605760635@qq.com', '154589878@qq.com']
+mail_user = "gaoming971366"
+mail_pw = "625125301"
+mail_postfix = "163.com"
+
+[DATABASE]
+DB_type = "MySQL"
+DB_server = "192.168.1.77"
+DB_port = 3306
+DB_db = "WS_Traffic"
+DB_uid = "qtjy"
+DB_pwd = "pass123"

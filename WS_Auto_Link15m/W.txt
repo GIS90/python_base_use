@@ -1,0 +1,2 @@
+mysqldump -h192.168.1.77 -uqtjy -ppass123 dbname WS_Traffic --where "select * from FcdT_Link15m where time between '2016-06-01' and '2016-07-01'"
+mysqldump -h127.0.0.1 -uroot -p123456 test test --where "select * from test where time>'2016-06-01' and time<'2016-07-01'">D:\a.txt

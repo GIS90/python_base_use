@@ -1,0 +1,10 @@
+1.脚本共有4个文件夹及1个main脚本入口
+    ConfigDir配置文件夹
+    Core核心代码文件夹
+    DestFile生成结果存放目录
+    Log日志目录
+2.RF:成果文件配置
+  SQL:查询的语句配置
+  DATABASE:为数据库配置
+3.配置好配置文件，执行main.py脚本即可
+4.示例数据放在ConfigDir配置文件夹

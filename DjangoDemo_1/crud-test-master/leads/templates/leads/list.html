@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Tour Lead CRUD Test</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+        rel="stylesheet" type="text/css">
+        <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
+        rel="stylesheet" type="text/css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/flatly/bootstrap.min.css"
+        rel="stylesheet" type="text/css">
+    </head>
+    
+    <body>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><span>CRM</span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">Tour Leads</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcrumb">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="active">Tour Leads</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a class="btn btn-primary"><i class="fa fa-plus fa-fw"></i>Add Lead</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table">
+                            <thead>
+                                <tr class="active">
+                                    <th>Choose</th>
+                                    <th>Operation</th>
+                                    <th>Name</th>
+                                    <th>Gender</th>
+                                    <th>Card Number</th>
+                                    <th>Expire Date</th>
+                                    <th>Languages</th>
+                                    <th>Professional</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>
+                                        <a href="# ">Edit</a>|
+                                        <a href="# ">Delete</a>
+                                    </td>
+                                    <td>
+                                        <a href="#details">John Doe</a>
+                                    </td>
+                                    <td>M</td>
+                                    <td>XXXXXXXXXXXX</td>
+                                    <td>2015-11-20</td>
+                                    <td>Chinese, English</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>
+                                        <a href="# ">Edit</a>|
+                                        <a href="# ">Delete</a>
+                                    </td>
+                                    <td>
+                                        <a href="#details">John Doe</a>
+                                    </td>
+                                    <td>M</td>
+                                    <td>XXXXXXXXXXXX</td>
+                                    <td>2015-11-20</td>
+                                    <td>English</td>
+                                    <td>N</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>
+                                        <a href="# ">Edit</a>|
+                                        <a href="# ">Delete</a>
+                                    </td>
+                                    <td>
+                                        <a href="#details">John Doe</a>
+                                    </td>
+                                    <td>F</td>
+                                    <td>XXXXXXXXXXXX</td>
+                                    <td>2015-11-20</td>
+                                    <td>Chinese</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>
+                                        <a href="# ">Edit</a>|
+                                        <a href="# ">Delete</a>
+                                    </td>
+                                    <td>
+                                        <a href="#details">John Doe</a>
+                                    </td>
+                                    <td>M</td>
+                                    <td>XXXXXXXXXXXX</td>
+                                    <td>2015-11-20</td>
+                                    <td>Chinese</td>
+                                    <td>Y</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-3 ">
+                        <input type="checkbox">Select All
+                        <a class="btn btn-primary pull-right "><i class="fa fa-remove
+                    fa-fw "></i>Delete</a>
+                    </div>
+                    <div class="col-md-9 ">
+                        <ul class="pagination pull-right ">
+                            <li>
+                                <a href="# ">Prev</a>
+                            </li>
+                            <li>
+                                <a href="# ">1</a>
+                            </li>
+                            <li>
+                                <a href="# ">2</a>
+                            </li>
+                            <li>
+                                <a href="# ">3</a>
+                            </li>
+                            <li>
+                                <a href="# ">4</a>
+                            </li>
+                            <li>
+                                <a href="# ">5</a>
+                            </li>
+                            <li>
+                                <a href="# ">Next</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section ">
+            <div class="container ">
+                <div class="row ">
+                    <div class="col-md-12 ">
+                        <ul class="breadcrumb ">
+                            <li>
+                                <a href="# ">Home</a>
+                            </li>
+                            <li>
+                                <a href="# ">Tour Leads</a>
+                            </li>
+                            <li class="active ">Add Lead</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-12 ">
+                        <form class="form-horizontal " role="form ">
+                            <div class="form-group ">
+                                <div class="col-sm-2 ">
+                                    <label for="inputEmail3 " class="control-label ">Name</label>
+                                </div>
+                                <div class="col-sm-10 ">
+                                    <input type="text " class="form-control " id="inputEmail3
+                    " placeholder="John Doe ">
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-2 ">
+                                    <label for="gender " class="control-label ">Gender</label>
+                                </div>
+                                <div class="col-sm-10 ">
+                                    <input type="radio" id="gender" value="M">
+                                    <label>Male</label>
+                                    <input type="radio" id="gender" value="F">
+                                    <label>Female</label>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-2 ">
+                                    <label for="languages " class="control-label ">Languages</label>
+                                </div>
+                                <div class="col-sm-10">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="languages" placeholder="Chinese">
+                                        <span class="input-group-btn">
+                                            <button class="btn">
+                                                <i class="fa fa-plus fa-fw"></i>Add</button>
+                                        </span>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="languages" placeholder="English">
+                                        <span class="input-group-btn">
+                                            <button class="btn">
+                                                <i class="fa fa-remove fa-fw"></i>Remove</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-2 ">
+                                    <label for="card " class="control-label ">Card Number</label>
+                                </div>
+                                <div class="col-sm-10 ">
+                                    <input type="text " class="form-control " id="card
+                    " placeholder="XXXXXXXXXXXXXXX ">
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-2 ">
+                                    <label for="date " class="control-label ">Expiry Date</label>
+                                </div>
+                                <div class="col-sm-10 ">
+                                    <input type="text " class="form-control " id="date
+                    " placeholder="2015-11-20 ">
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-2 ">
+                                    <label for="pro " class="control-label ">Professional</label>
+                                </div>
+                                <div class="col-sm-10 ">
+                                    <input type="radio" id="pro" value="Y ">
+                                    <label>Yes</label>
+                                    <input type="radio" id="pro" value="N ">
+                                    <label>No</label>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-offset-2 col-sm-10 ">
+                                    <button type="submit " class="btn btn-default ">
+                                        <i class="fa fa-save fa-fw "></i>Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section ">
+            <div class="container ">
+                <div class="row ">
+                    <a name="details"></a>
+                    <div class="col-md-12 ">
+                        <ul class="breadcrumb ">
+                            <li>
+                                <a href="# ">Home</a>
+                            </li>
+                            <li>
+                                <a href="# ">Tour Leads</a>
+                            </li>
+                            <li class="active ">John Doe</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-12 ">
+                        <form class="form-horizontal " role="form ">
+                            <div class="form-group ">
+                                <div class="col-sm-2 ">
+                                    <label for="inputEmail3 " class="control-label ">Name</label>
+                                </div>
+                                <div class="col-sm-10 ">John Doe</div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-2 ">
+                                    <label for="gender " class="control-label ">Gender</label>
+                                </div>
+                                <div class="col-sm-10 ">M</div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-2 ">
+                                    <label for="languages " class="control-label ">Languages</label>
+                                </div>
+                                <div class="col-sm-10 ">Chinese, English</div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-2 ">
+                                    <label for="card " class="control-label ">Card Number</label>
+                                </div>
+                                <div class="col-sm-10 ">XXXXXXXXXXXXXXX</div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-2 ">
+                                    <label for="date " class="control-label ">Expiry Date</label>
+                                </div>
+                                <div class="col-sm-10 ">2015-11-20</div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-2 ">
+                                    <label for="pro " class="control-label ">Professional</label>
+                                </div>
+                                <div class="col-sm-10 ">Y</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

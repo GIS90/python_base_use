@@ -1,0 +1,14 @@
+Server:
+    host: 0.0.0.0
+    port: 1990
+
+Database:
+    host: 192.168.1.6
+    port: 3306
+    user: qtjy
+    password: pass123
+    database: WZ_Traffic
+
+GPSTable: gps
+
+GPSFolder: E:\data\gps

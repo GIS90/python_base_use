@@ -1,0 +1,2 @@
+#ip:3389:用户名:密码:自动启动服务=状态:进程.exe
+192.168.2.152:3389:Administrator:0:Server Boot=stop:Performance Logs and Alerts=stop:Center Network=stop:fuck.exe

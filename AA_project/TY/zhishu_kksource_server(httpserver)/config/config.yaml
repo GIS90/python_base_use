@@ -1,0 +1,18 @@
+# socket server config
+Server:
+    host: 0.0.0.0
+    port: 1990
+
+# kakou source data stored database
+Database:
+    host: 127.0.0.1
+    port: 3306
+    user: root
+    password: 123456
+    database: test
+
+# kakou database table
+KakouTable: kakou
+
+# kakou stored folder
+KakouFolder: E:\data\kakou

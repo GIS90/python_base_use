@@ -1,0 +1,45 @@
+# -*- coding: utf-8 -*-
+
+from SocketServer import BaseRequestHandler, ThreadingTCPServer
+from Log import Log
+import json
+from datetime import datetime
+from SQLHandler import SQLHandler
+
+
+class TCPServer(BaseRequestHandler):
+    def setup(self):
+        BaseRequestHandler.setup(self)
+
+    def handle(self):
+        peer = self.request.getpeername()
+        data = self.request.recv(16 * 1024)
+        Log.info("got connection request from peer %s, request is %s" % (str(peer), str(data)))
+        s = SQLHandler()
+        s.connect()
+        dataType, startTime, endTime = TCPServer.parseRequest(data)
+        if dataType:
+            result, number = s.queryItems(dataType, startTime, endTime)
+            if result:
+                self.request.sendall(result)
+            endValue = json.dumps({"SERVER_SEND_END_FLAG": int(number)}, sort_keys=True)
+            self.request.sendall(endValue)
+        else:
+            Log.debug("handle the msg could not be parsed " + str(data))
+        self.request.close()
+
+    @staticmethod
+    def parseRequest(request):
+        if not isinstance(request, basestring) or not request:
+            return None, None, None
+        try:
+            request = request.strip()
+            result = json.loads(request, encoding='utf-8')
+            dataType = int(result[u"dataType"])
+            startTime = result[u"startTime"]
+            endTime = result[u"endTime"]
+            return dataType, startTime, endTime
+        except Exception as e:
+            m = 'MyServer request2sql dump failed, error ' + str(e) + " " + request
+            Log.error(m)
+            return None, None, None

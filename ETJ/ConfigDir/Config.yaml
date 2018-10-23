@@ -1,0 +1,19 @@
+DATABASE:
+    # 数据库配置信息
+    TYPE: SQL_Server
+    SERVER: localhost
+    PORT: 1433
+    DB: qd_json
+    UID: sa
+    PWD: 123456
+
+SQL:
+    # TYPE = 1 结果返回字符串（求个数）；TYPE = 2 结果返回列表（查询内容）
+    TYPE: 2
+    CONTENT: select top 10 * from qd_json.dbo.cell
+
+RF:
+    TYPE: .js
+    NAME: WJs
+    PATH: D:\Py_file\ETJ\DestFile
+
